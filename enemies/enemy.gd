@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 @export var speed = 100
 @export var activation_radius = 1280
-@onready var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+@export var gravity: int = 0
 
 enum Facing {
 	LEFT,
@@ -20,7 +20,8 @@ var state = State.ALIVE
 var direction = -1 if facing == Facing.LEFT else 1
 
 func _ready():
-	pass
+	if gravity == 0:
+		gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _physics_process(delta):
 	if state == State.DEAD:

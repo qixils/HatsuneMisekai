@@ -14,6 +14,8 @@ func _process(delta):
 func _on_body_entered(body):
 	if not (body is Player):
 		return
+	if PlayerVariables.fade > 0:
+		return
 	var _body = body as Player
 	_body.position = Vector2(0, 0)
 	PlayerVariables.checkpoint = 0
