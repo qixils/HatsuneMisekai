@@ -14,6 +14,13 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+focus_neighbor_left = NodePath("MenuButtons/PlayButton")
+focus_neighbor_top = NodePath("MenuButtons/PlayButton")
+focus_neighbor_right = NodePath("MenuButtons/PlayButton")
+focus_neighbor_bottom = NodePath("MenuButtons/PlayButton")
+focus_next = NodePath("MenuButtons/PlayButton")
+focus_previous = NodePath("MenuButtons/PlayButton")
+focus_mode = 2
 
 [node name="Titlescreen" type="Sprite2D" parent="."]
 position = Vector2(640, 360)

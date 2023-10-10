@@ -22,10 +22,12 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 stream = ExtResource("1_yen5e")
-buffering_msec = 1000
+buffering_msec = 250
 script = ExtResource("2_kg2ha")
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
 autostart = true
 
 [connection signal="finished" from="Video" to="Video" method="_on_finished"]

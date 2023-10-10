@@ -12,8 +12,6 @@ speed = 0
 activation_radius = 0
 
 [node name="Sprite" type="Sprite2D" parent="."]
-texture_filter = 1
-scale = Vector2(2, 2)
 texture = ExtResource("2_b4ngx")
 
 [node name="Collision" type="CollisionPolygon2D" parent="."]

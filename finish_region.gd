@@ -14,5 +14,7 @@ func _process(delta):
 func _on_body_entered(body):
 	if not (body is Player):
 		return
+	var _body = body as Player
+	_body.position = Vector2(0, 0)
+	PlayerVariables.checkpoint = 0
 	get_tree().change_scene_to_file("res://ending.tscn")
-	pass # Replace with function body.

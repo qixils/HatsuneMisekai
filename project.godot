@@ -26,6 +26,9 @@ PlayerVariables="*res://player_variables.gd"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
+window/stretch/mode="viewport"
+window/vsync/vsync_mode=2
+mouse_cursor/custom_image="res://cursor.png"
 
 [dotnet]
 
@@ -71,7 +74,16 @@ blast={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="All"
+2d_physics/layer_2="Terrain"
+2d_physics/layer_3="Enemies"
+2d_physics/layer_4="Player"
+2d_physics/layer_5="Checkpoints"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.372549, 0.803922, 0.894118, 1)

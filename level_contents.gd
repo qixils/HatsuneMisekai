@@ -10,4 +10,4 @@ func _on_player_update_position(old_value: Vector2, new_value: Vector2):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	position.x = min(0, -player_position + (DisplayServer.window_get_size().x / 2))
+	position.x = min(0, -player_position + (ProjectSettings.get_setting("display/window/size/viewport_width") / 2))

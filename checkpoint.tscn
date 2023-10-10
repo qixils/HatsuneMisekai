@@ -31,6 +31,7 @@ collision_layer = 17
 script = ExtResource("1_xhimm")
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_k7ebi")
 animation = &"active"
 
