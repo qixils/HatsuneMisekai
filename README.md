@@ -1,5 +1,5 @@
 # Hatsune Misekai: SAVE VOZY!
-Vozy has been trapped with Hatsune Miku in a mysterious foreign land, except... oh no! Vozy's been captured! Play as Hatsune Miku to help rescue her! · Hatsune Misekai: SAVE VOZY!
+Vozy has been trapped with Hatsune Miku in a mysterious foreign land, except... oh no! Vozy's been captured! Play as Hatsune Miku to help rescue her!
 
 ## What
 This is a 2D platformer that was made in Godot 4.1.2 in roughly 24 hours for the annual tradition of creating a video game for my friend [@SlippingGitty](https://github.com/SlippingGitty).
@@ -12,6 +12,7 @@ I'm not going to explain all the in-jokes, sorry.
 
 ## Where
 You can play it on [Web](https://qixils.dev/HatsuneMisekai), although it's easily the jankiest of all the platforms.
+You should instead download it for Windows, macOS, or Linux [here](https://github.com/qixils/HatsuneMisekai/releases/latest).
 
 ## Why
 Blame BRBY, he started this tradition.
