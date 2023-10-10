@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://70exbfy0k0bn"]
+
+[ext_resource type="Script" path="res://enemies/enemy.gd" id="1_c376f"]
+[ext_resource type="Texture2D" uid="uid://bu6t7688gl72f" path="res://enemies/crewmate.png" id="2_owcpy"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q4y84"]
+radius = 12.0
+height = 32.0
+
+[node name="Crewmate" type="CharacterBody2D"]
+collision_layer = 5
+collision_mask = 6
+floor_snap_length = 5.0
+script = ExtResource("1_c376f")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_owcpy")
+flip_h = true
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_q4y84")

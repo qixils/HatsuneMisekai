@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbur5xepxfxmh"]
+
+[ext_resource type="Script" path="res://enemies/enemy.gd" id="1_aiak4"]
+[ext_resource type="Texture2D" uid="uid://b04f13y5wd51c" path="res://enemies/jacksfilms.png" id="2_h46li"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gn8k7"]
+size = Vector2(64, 64)
+
+[node name="Jacksfilms" type="CharacterBody2D"]
+collision_layer = 5
+collision_mask = 6
+floor_snap_length = 5.0
+script = ExtResource("1_aiak4")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("2_h46li")
+flip_h = true
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_gn8k7")

@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://codhbc64ffr8w"]
+
+[ext_resource type="Script" path="res://enemies/enemy.gd" id="1_di78v"]
+[ext_resource type="Texture2D" uid="uid://dxj7ty7o2o760" path="res://spikes.png" id="2_b4ngx"]
+
+[node name="Spikes" type="CharacterBody2D"]
+collision_layer = 5
+collision_mask = 6
+floor_snap_length = 5.0
+script = ExtResource("1_di78v")
+speed = 0
+activation_radius = 0
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("2_b4ngx")
+
+[node name="Collision" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-64, 64, -44, 4, 44, 4, 64, 64)

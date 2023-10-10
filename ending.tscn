@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://dorq2bbx53087"]
+
+[ext_resource type="VideoStream" path="res://ending.ogv" id="1_yen5e"]
+[ext_resource type="Script" path="res://video.gd" id="2_kg2ha"]
+
+[node name="Ending" type="Control"]
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 1)
+
+[node name="Video" type="VideoStreamPlayer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("1_yen5e")
+buffering_msec = 1000
+script = ExtResource("2_kg2ha")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="finished" from="Video" to="Video" method="_on_finished"]
+[connection signal="timeout" from="Timer" to="Video" method="_on_timer_timeout"]

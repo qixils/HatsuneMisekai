@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://duefbhbbg8ptt"]
+
+[ext_resource type="Script" path="res://songometer_bar.gd" id="1_r2w6o"]
+
+[sub_resource type="Theme" id="Theme_4mnhh"]
+default_font_size = 25
+
+[node name="Songometer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 165.0
+offset_bottom = 72.0
+color = Color(0.345098, 0.733333, 0.815686, 0.435294)
+
+[node name="Text" type="Label" parent="."]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 2.0
+offset_right = 156.0
+offset_bottom = 40.0
+theme = SubResource("Theme_4mnhh")
+text = "Songometer"
+
+[node name="EmptyBar" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 42.0
+offset_right = 158.0
+offset_bottom = 62.0
+color = Color(0.0862745, 0.305882, 0.34902, 1)
+
+[node name="SongBar" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 42.0
+offset_right = 158.0
+offset_bottom = 62.0
+color = Color(0.372549, 0.803922, 0.894118, 1)
+script = ExtResource("1_r2w6o")

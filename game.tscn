@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://b37tsrruclsdd"]
+
+[ext_resource type="PackedScene" uid="uid://bpdesygj6qooj" path="res://ui.tscn" id="1_4nl8p"]
+[ext_resource type="PackedScene" uid="uid://ij0kj3xl4all" path="res://level.tscn" id="1_dn08h"]
+[ext_resource type="PackedScene" uid="uid://c2sch22c432bv" path="res://loading_screen.tscn" id="3_fj03i"]
+[ext_resource type="AudioStream" uid="uid://7t4dyctccfeg" path="res://bgm.tres" id="4_85dgs"]
+
+[node name="Game" type="Node"]
+
+[node name="Level" parent="." instance=ExtResource("1_dn08h")]
+
+[node name="UI" parent="." instance=ExtResource("1_4nl8p")]
+
+[node name="LoadingScreen" parent="." instance=ExtResource("3_fj03i")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_85dgs")
+volume_db = -10.0
+autoplay = true

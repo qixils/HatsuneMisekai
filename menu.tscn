@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=3 uid="uid://2n4usfveoch"]
+
+[ext_resource type="PackedScene" uid="uid://ckfyxisj11ykc" path="res://menu_button.tscn" id="1_hhiik"]
+[ext_resource type="Texture2D" uid="uid://c516hrrk8xmru" path="res://titlescreen.png" id="1_n7122"]
+[ext_resource type="Script" path="res://play_button.gd" id="2_a6xlj"]
+[ext_resource type="Script" path="res://exit_button.gd" id="2_yqft3"]
+[ext_resource type="Script" path="res://options_button.gd" id="4_dvr5b"]
+
+[sub_resource type="Theme" id="Theme_m4ix2"]
+default_font_size = 64
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Titlescreen" type="Sprite2D" parent="."]
+position = Vector2(640, 360)
+texture = ExtResource("1_n7122")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_right = 1279.0
+offset_bottom = 328.0
+theme = SubResource("Theme_m4ix2")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+text = "Hatsune Misekai: SAVE VOZY!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MenuButtons" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 405.0
+offset_top = 328.0
+offset_right = 875.0
+offset_bottom = 622.0
+
+[node name="PlayButton" parent="MenuButtons" instance=ExtResource("1_hhiik")]
+layout_mode = 2
+text = "Play"
+script = ExtResource("2_a6xlj")
+
+[node name="OptionsButton" parent="MenuButtons" instance=ExtResource("1_hhiik")]
+layout_mode = 2
+text = "Options"
+script = ExtResource("4_dvr5b")
+
+[node name="ExitButton" parent="MenuButtons" instance=ExtResource("1_hhiik")]
+layout_mode = 2
+text = "Exit"
+script = ExtResource("2_yqft3")
+
+[connection signal="pressed" from="MenuButtons/PlayButton" to="MenuButtons/PlayButton" method="_on_pressed"]
+[connection signal="pressed" from="MenuButtons/OptionsButton" to="MenuButtons/OptionsButton" method="_on_pressed"]
+[connection signal="pressed" from="MenuButtons/ExitButton" to="MenuButtons/ExitButton" method="_on_pressed"]
+
+[editable path="MenuButtons/PlayButton"]
+[editable path="MenuButtons/OptionsButton"]
+[editable path="MenuButtons/ExitButton"]

@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dk7xygatuhdwg"]
+
+[ext_resource type="Script" path="res://enemies/enemy.gd" id="1_0ybor"]
+[ext_resource type="Texture2D" uid="uid://c65oj8jenvoqx" path="res://enemies/lucario.png" id="2_ndaa7"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5he4m"]
+radius = 18.0
+height = 64.0
+
+[node name="Lucario" type="CharacterBody2D"]
+collision_layer = 5
+collision_mask = 6
+floor_snap_length = 5.0
+script = ExtResource("1_0ybor")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("2_ndaa7")
+flip_h = true
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_5he4m")

@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3vkt0shls8l1"]
+
+[ext_resource type="Script" path="res://enemies/enemy.gd" id="1_hqf0v"]
+[ext_resource type="Texture2D" uid="uid://cb0g1w0awod8f" path="res://enemies/idiot.png" id="2_i8g23"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q4y84"]
+radius = 12.0
+height = 38.0
+
+[node name="Idiot" type="CharacterBody2D"]
+collision_layer = 5
+collision_mask = 6
+floor_snap_length = 5.0
+script = ExtResource("1_hqf0v")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("2_i8g23")
+flip_h = true
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_q4y84")

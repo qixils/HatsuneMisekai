@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpdesygj6qooj"]
+
+[ext_resource type="PackedScene" uid="uid://duefbhbbg8ptt" path="res://songometer.tscn" id="1_ngpw8"]
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Songometer" parent="." instance=ExtResource("1_ngpw8")]
+layout_mode = 1
+offset_left = 14.0
+offset_top = 12.0
+offset_right = 14.0
+offset_bottom = 12.0
