@@ -1,13 +1,24 @@
-[gd_scene load_steps=7 format=3 uid="uid://2n4usfveoch"]
+[gd_scene load_steps=10 format=3 uid="uid://2n4usfveoch"]
 
 [ext_resource type="PackedScene" uid="uid://ckfyxisj11ykc" path="res://menu_button.tscn" id="1_hhiik"]
 [ext_resource type="Texture2D" uid="uid://c516hrrk8xmru" path="res://titlescreen.png" id="1_n7122"]
 [ext_resource type="Script" path="res://play_button.gd" id="2_a6xlj"]
+[ext_resource type="FontFile" uid="uid://2lpvgb78trl1" path="res://RobotoMono-VariableFont_wght.ttf" id="2_pllo3"]
 [ext_resource type="Script" path="res://exit_button.gd" id="2_yqft3"]
 [ext_resource type="Script" path="res://options_button.gd" id="4_dvr5b"]
 
 [sub_resource type="Theme" id="Theme_m4ix2"]
 default_font_size = 64
+
+[sub_resource type="FontVariation" id="FontVariation_bjdju"]
+base_font = ExtResource("2_pllo3")
+variation_opentype = {
+2003265652: 550
+}
+
+[sub_resource type="Theme" id="Theme_e027j"]
+default_font = SubResource("FontVariation_bjdju")
+default_font_size = 24
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -34,6 +45,19 @@ theme = SubResource("Theme_m4ix2")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 15
 text = "Hatsune Misekai: SAVE VOZY!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Version" type="Label" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 686.0
+offset_right = 188.0
+offset_bottom = 723.0
+theme = SubResource("Theme_e027j")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.192157)
+theme_override_constants/outline_size = 5
+text = "Version 1.1.1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
