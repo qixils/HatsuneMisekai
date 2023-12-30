@@ -11,7 +11,7 @@ I'm not going to explain all the in-jokes, sorry.
 - [@qixils](https://github.com/qixils) created everything else.
 
 ## Where
-You can play it on [Web](https://qixils.dev/HatsuneMisekai), although it's easily the jankiest of all the platforms (doesn't work on macOS, for instance).
+You can play it on [Web](https://i.qixils.dev/HatsuneMisekai), although it's easily the jankiest of all the platforms (doesn't work on macOS, for instance).
 You should instead download it for Windows, macOS, or Linux [here](https://github.com/qixils/HatsuneMisekai/releases/latest).
 
 ## Why
